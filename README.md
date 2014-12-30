@@ -1,4 +1,4 @@
 angular-useragent
 =================
 
-Angular useragent service
+Angular Useragent
