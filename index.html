@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="useragent">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script data-require="angular.js@1.3.x" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js" data-semver="1.3.7"></script>
+  <script data-require="jquery@*" data-semver="2.1.1" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+  <script src="js/app.js"></script>
+  <style>
+    dd {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body ng-controller="MainCtrl">
+<div class="well">
+  <dl class="dl-horizontal">
+    <dt>Useragent</dt>
+    <dd>{{useragent}}</dd>
+    
+    <dt>Application Name</dt>
+    <dd>{{appCodeName}}</dd>
+
+    <dt>Application Version</dt>
+    <dd>{{appVersion}}</dd>
+
+    <dt>Platform</dt>
+    <dd>{{platform}}</dd>
+
+    <dt>Browser Name</dt>
+    <dd>{{browserName}}</dd>
+
+    <dt>Browser Version</dt>
+    <dd>{{version}}</dd>
+
+    <dt>Operating System</dt>
+    <dd>{{OS}}</dd>
+
+    <dt>Device Name</dt>
+    <dd>{{device}}</dd>
+
+    <dt>Cookie Enabled</dt>
+    <dd>{{cookie}}</dd>
+
+    <dt>Language</dt>
+    <dd>{{lang }}</dd>
+
+    <dt>Online</dt>
+    <dd>{{online}}</dd>
+
+  </dl>
+  </div>
+</body>
+
+</html>
