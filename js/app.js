@@ -2,8 +2,8 @@ var app = angular.module('useragent', []);
 
 app.controller('MainCtrl', function ($scope, useragent) {
 	$scope.useragent = useragent.get();
-	$scope.appCodeName = useragent.appCodeName();
-	$scope.browserName = useragent.browserName();
+	$scope.appCodeName = useragent.appName();
+	$scope.browserName = useragent.browser();
 	$scope.platform = useragent.platform();
 	$scope.appVersion = useragent.appVersion();
 	$scope.version = useragent.version();
@@ -120,15 +120,11 @@ app.factory('useragent', function () {
 			return Agent;
 		},
 
-		appCodeName: function () {
+		appName: function () {
 			return CodeName;
 		},
 
-		appName: function () {
-			return browserName;
-		},
-
-		browserName: function () {
+		browser: function () {
 			return browserName;
 		},
 

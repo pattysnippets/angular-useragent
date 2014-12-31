@@ -109,15 +109,11 @@ useragent.factory('useragent', function () {
 			return Agent;
 		},
 
-		appCodeName: function () {
+		appName: function () {
 			return CodeName;
 		},
 
-		appName: function () {
-			return browserName;
-		},
-
-		browserName: function () {
+		browser: function () {
 			return browserName;
 		},
 
