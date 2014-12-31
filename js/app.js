@@ -15,6 +15,7 @@ app.controller('MainCtrl', function ($scope, useragent) {
 	$scope.touch = useragent.touch();
 	$scope.online = useragent.online();
 	$scope.screen = useragent.screen();
+	$scope.pixelratio = useragent.pixelratio();
 });
 
 var n = navigator,
@@ -33,7 +34,8 @@ var n = navigator,
 	touch = Modernizr.touch,
 	width = (screen.width) ? screen.width : '',
 	height = (screen.height) ? screen.height : '',
-	screensize = '';
+	screensize = '',
+	pixelratio = window.devicePixelRatio;
 
 // In Chrome
 if ((objOffsetVersion = Agent.indexOf("Chrome")) != -1) {
@@ -164,6 +166,10 @@ app.factory('useragent', function () {
 
 		screen: function () {
 			return screensize;
+		},
+
+		pixelratio: function () {
+			return pixelratio;
 		},
 
 		device: function () {

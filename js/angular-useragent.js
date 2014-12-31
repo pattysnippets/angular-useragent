@@ -23,7 +23,8 @@ var n = navigator,
 	touch = Modernizr.touch,
 	width = (screen.width) ? screen.width : '',
 	height = (screen.height) ? screen.height : '',
-	screensize = '';
+	screensize = '',
+	pixelratio = window.devicePixelRatio;
 
 // In Chrome
 if ((objOffsetVersion = Agent.indexOf("Chrome")) != -1) {
@@ -101,7 +102,6 @@ var mobile = {
 //Screen
 screensize += '' + width + " x " + height;
 
-
 useragent.factory('useragent', function () {
 
 	return {
@@ -155,6 +155,10 @@ useragent.factory('useragent', function () {
 
 		screen: function () {
 			return screensize;
+		},
+
+		pixelratio: function () {
+			return pixelratio;
 		},
 
 		device: function () {
