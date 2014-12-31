@@ -20,7 +20,10 @@ var n = navigator,
 	BrMajorVersion = parseInt(n.appVersion, 10),
 	OffsetName, objOffsetVersion, ix,
 	OSname = 'unknownOS',
-	touch = Modernizr.touch;
+	touch = Modernizr.touch,
+	width = (screen.width) ? screen.width : '',
+	height = (screen.height) ? screen.height : '',
+	screensize = '';
 
 // In Chrome
 if ((objOffsetVersion = Agent.indexOf("Chrome")) != -1) {
@@ -95,6 +98,9 @@ var mobile = {
 	}
 };
 
+//Screen
+screensize += '' + width + " x " + height;
+
 
 useragent.factory('useragent', function () {
 
@@ -123,7 +129,7 @@ useragent.factory('useragent', function () {
 			return platform;
 		},
 
-		version: function (v) {  
+		version: function (v) {
 			return v ? fullVersion : BrMajorVersion;
 		},
 
@@ -147,8 +153,12 @@ useragent.factory('useragent', function () {
 			return touch;
 		},
 
+		screen: function () {
+			return screensize;
+		},
+
 		device: function () {
-			return mobile.any() ? mobile.any().toString() : 'Desktop'; 
+			return mobile.any() ? mobile.any().toString() : 'Desktop';
 		}
 	}
 
