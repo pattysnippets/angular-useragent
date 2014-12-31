@@ -17,7 +17,7 @@ app.controller('MainCtrl', function($scope, useragent) {
 	var n = navigator,
 		Agent = n.userAgent,
 		CodeName = n.appCodeName,
-		appVersion = n.appVersion,
+		appVersion = n.appVersion.substr(0,n.appVersion.indexOf(' ')),
 		browserName = n.appName,
 		platform = n.platform,
 		cookie = n.cookieEnabled,
