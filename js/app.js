@@ -26,7 +26,7 @@ app.controller('MainCtrl', function($scope, useragent) {
 		fullVersion = '' + parseFloat(n.appVersion),
 		BrMajorVersion = parseInt(n.appVersion, 10),
 		OffsetName, objOffsetVersion, ix,
-		OSname = 'unknownUS',
+		OSname = 'unknownOS',
 		touch = Modernizr.touch;
 
 	// In Chrome
