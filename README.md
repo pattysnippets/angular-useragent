@@ -11,3 +11,4 @@ Angular Useragent
  
 + Latest jQuery
 + AngularJS 1.3+
++ Latest Modernizr
