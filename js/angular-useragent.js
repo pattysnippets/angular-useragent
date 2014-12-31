@@ -123,9 +123,8 @@ useragent.factory('useragent', function () {
 			return platform;
 		},
 
-		version: function (v) { 
-			v = v ? fullVersion : BrMajorVersion; 
-			return v;
+		version: function (v) {  
+			return v ? fullVersion : BrMajorVersion;
 		},
 
 		OS: function () {

@@ -133,8 +133,7 @@ app.factory('useragent', function () {
 		},
 
 		version: function (v) { 
-			v = v ? fullVersion : BrMajorVersion; 
-			return v;
+			return v ? fullVersion : BrMajorVersion;
 		},
 
 		OS: function () {
