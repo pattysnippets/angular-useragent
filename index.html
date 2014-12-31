@@ -22,40 +22,88 @@
 </head>
 
 <body ng-controller="MainCtrl">
-<div class="well">
-  <dl class="dl-horizontal">
-      <dt>Useragent</dt>
-      <dd>{{useragent}}</dd>
-      <dt>Application Name</dt>
-      <dd>{{appCodeName}}</dd>
-      <dt>Application Version</dt>
-      <dd>{{appVersion}}</dd>
-      <dt>Platform</dt>
-      <dd>{{platform}}</dd>
-      <dt>Browser Name</dt>
-      <dd>{{browserName}}</dd>
-      <dt>Browser Version</dt>
-      <dd>{{version}}</dd>
+  <div class="well">
 
-      <dt>Browser Version (true)</dt>
-      <dd>{{versiontrue}}</dd>
-      <dt>Operating System</dt>
-      <dd>{{OS}}</dd>
-      <dt>Device Name</dt>
-      <dd>{{device}}</dd>
-      <dt>Cookie Enabled</dt>
-      <dd>{{cookie}}</dd>
-      <dt>Language</dt>
-      <dd>{{lang }}</dd>
-      <dt>Touch Enabled</dt>
-      <dd>{{touch}}</dd>
-      <dt>Online</dt>
-      <dd>{{online}}</dd>
-      <dt>Screen Size</dt>
-      <dd>{{screen}}</dd>
-      <dt>Pixel Ratio</dt>
-      <dd>{{pixelratio}}</dd>
-  </dl>
+  <table class="table table-bordered table-striped">
+    <tbody>
+      <tr>
+        <td>Useragent</td>
+        <td>{{useragent}}</td>
+        <td>useragent.get()</td>
+      </tr>
+      <tr>
+        <td>Application Name</td>
+        <td>{{appCodeName}}</td>
+        <td>useragent.appName()</td>
+      </tr>
+      <tr>
+        <td>Application Version</td>
+        <td>{{appVersion}}</td>
+        <td>useragent.appVersion()</td>
+      </tr>
+      <tr>
+        <td>Platform</td>
+        <td>{{platform}}</td>
+        <td>useragent.platform()</td>
+      </tr>
+      <tr>
+        <td>Browser Name</td>
+        <td>{{browserName}}</td>
+        <td>useragent.browser()</td>
+      </tr>
+      <tr>
+        <td>Browser Version</td>
+        <td>{{version}}</td>
+        <td>useragent.version()</td>
+      </tr>
+      <tr>
+        <td>Browser Version (true)</td>
+        <td>{{versiontrue}}</td>
+        <td>useragent.version(true)</td>
+      </tr>
+      <tr>
+        <td>Operating System</td>
+        <td>{{OS}}</td>
+        <td>useragent.OS()</td>
+      </tr>
+      <tr>
+        <td>Device Name</td>
+        <td>{{device}}</td>
+        <td>useragent.get()</td>
+      </tr>
+      <tr>
+        <td>Cookie Enabled</td>
+        <td>{{cookie}}</td>
+        <td>useragent.cookie()</td>
+      </tr>
+      <tr>
+        <td>Language</td>
+        <td>{{lang }</td>
+        <td>useragent.lang()</td>
+      </tr>
+      <tr>
+        <td>Touch Enabled</td>
+        <td>{{touch}}</td>
+        <td>useragent.touch()</td>
+      </tr>
+      <tr>
+        <td>Online</td>
+        <td>{{online}}</td>
+        <td>useragent.online()</td>
+      </tr>
+      <tr>
+        <td>Screen Size</td>
+        <td>{{screen}}</td>
+        <td>useragent.screen()</td>
+      </tr>
+      <tr>
+        <td>Pixel Ratio</td>
+        <td>{{pixelratio}}</td>
+        <td>useragent.pixelratio()</td>
+      </tr>
+    </tbody>
+  </table>
+
   </div>
 </body>
 
