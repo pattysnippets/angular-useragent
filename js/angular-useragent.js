@@ -123,8 +123,9 @@ useragent.factory('useragent', function () {
 			return platform;
 		},
 
-		version: function () {
-			return BrMajorVersion;
+		version: function (v) { 
+			v = v ? fullVersion : BrMajorVersion; 
+			return v;
 		},
 
 		OS: function () {
@@ -148,7 +149,7 @@ useragent.factory('useragent', function () {
 		},
 
 		device: function () {
-			return mobile.any();
+			return mobile.any() ? mobile.any().toString() : 'Desktop'; 
 		}
 	}
 
