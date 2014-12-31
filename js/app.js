@@ -26,7 +26,8 @@ app.controller('MainCtrl', function($scope, useragent) {
 		fullVersion = '' + parseFloat(n.appVersion),
 		BrMajorVersion = parseInt(n.appVersion, 10),
 		OffsetName, objOffsetVersion, ix,
-		OSname = 'unknownUS';
+		OSname = 'unknownUS',
+		touch = Modernizr.touch;
 
 	// In Chrome
 	if ((objOffsetVersion = Agent.indexOf("Chrome")) != -1) {
@@ -147,6 +148,10 @@ app.factory('useragent', function () {
 
 			online: function () {
 				return online;
+			},
+
+			touch: function () {
+				return touch;
 			},
 
 			device: function () {
