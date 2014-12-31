@@ -10,7 +10,7 @@ var useragent = angular.module('useragent', []);
 var n = navigator,
 	Agent = n.userAgent,
 	CodeName = n.appCodeName,
-	appVersion = n.appVersion.substr(0,n.appVersion.indexOf(' ')),
+	appVersion = n.appVersion.substr(0, n.appVersion.indexOf(' ')),
 	browserName = n.appName,
 	platform = n.platform,
 	cookie = n.cookieEnabled,
@@ -148,10 +148,7 @@ useragent.factory('useragent', function () {
 		},
 
 		device: function () {
-			var d = 'null';
-			if (mobile.any())
-				d = mobile.any();
-			return d;
+			return mobile.any();
 		}
 	}
 

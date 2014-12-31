@@ -154,11 +154,8 @@ app.factory('useragent', function () {
 				return touch;
 			},
 
-			device: function () {
-			  var d = 'null';
-			  if (mobile.any())
-			    d = mobile.any();
-				return d;
+			device: function () { 
+				return mobile.any();
 			}
 		}
 
